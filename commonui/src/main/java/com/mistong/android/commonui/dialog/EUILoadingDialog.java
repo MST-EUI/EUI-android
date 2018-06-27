@@ -22,7 +22,7 @@ import com.mistong.android.commonui.R;
 public class EUILoadingDialog extends Dialog {
 
     public EUILoadingDialog(@NonNull Context context) {
-        super(context, R.style.EUI_Dialog);
+        super(context, R.style.EUI_Button);
         init(context);
     }
 
