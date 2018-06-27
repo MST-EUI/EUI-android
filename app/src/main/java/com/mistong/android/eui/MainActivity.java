@@ -9,7 +9,8 @@ import android.widget.Toast;
 
 import com.mistong.android.commonui.dialog.EUIHorizontalDialog;
 import com.mistong.android.commonui.dialog.EUIVerticalDialog;
-import com.mistong.android.eui.toast.EUIToast;
+import com.mistong.android.commonui.dialog.EUILoadingDialog;
+import com.mistong.android.commonui.toast.EUIToast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private RadioGroup radio;
 
-    private LoadingDialog loadingDialog;
+    private EUILoadingDialog EUILoadingDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -186,18 +187,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onDestroy() {
-        if (loadingDialog != null) {
-            loadingDialog.dismiss();
+        if (EUILoadingDialog != null) {
+            EUILoadingDialog.dismiss();
         }
         super.onDestroy();
     }
 
     private void showLoadingDialog() {
-        if (loadingDialog == null) {
-            loadingDialog = new LoadingDialog(this);
+        if (EUILoadingDialog == null) {
+            EUILoadingDialog = new EUILoadingDialog(this);
         }
-        if (!loadingDialog.isShowing()) {
-            loadingDialog.show();
+        if (!EUILoadingDialog.isShowing()) {
+            EUILoadingDialog.show();
         }
     }
 

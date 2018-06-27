@@ -1,4 +1,4 @@
-package com.mistong.android.eui.toast;
+package com.mistong.android.commonui.toast;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
