@@ -15,9 +15,7 @@
         <item name="android:windowNoTitle">true</item>
     </style>
 
-    <style name="EUI"/>
-
-    <style name="EUI.Button" parent="Base.Widget.AppCompat.Button.Borderless">
+    <style name="EUI_Button" parent="Base.Widget.AppCompat.Button.Borderless">
 
         <item name="android:background">@drawable/eui_button_bg</item>
         <item name="android:textColor">@color/eui_button_text_color</item>
@@ -28,7 +26,7 @@
 
     </style>
 
-    <style name="EUI.RadioButton" parent="Base.Widget.AppCompat.CompoundButton.RadioButton">
+    <style name="EUI_RadioButton" parent="Base.Widget.AppCompat.CompoundButton.RadioButton">
 
         <item name="android:button">@drawable/eui_radio_button</item>
         <item name="android:background">@android:color/transparent</item>
@@ -39,7 +37,7 @@
 
     </style>
 
-    <style name="EUI.Dialog" parent="Base.Theme.AppCompat.Light.Dialog">
+    <style name="EUI_Dialog" parent="Base.Theme.AppCompat.Light.Dialog">
 
         <item name="android:windowBackground">@android:color/transparent</item>
 

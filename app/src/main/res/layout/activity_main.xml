@@ -102,7 +102,7 @@
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            style="@style/EUI.Button"
+            style="@style/EUI_Button"
             android:text="按钮 - 普通"/>
 
         <Button
@@ -110,7 +110,7 @@
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            style="@style/EUI.Button"
+            style="@style/EUI_Button"
             android:enabled="false"
             android:text="按钮 - 禁用"/>
 
@@ -124,14 +124,14 @@
                 android:id="@+id/rb1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/EUI.RadioButton"
+                style="@style/EUI_RadioButton"
                 android:text="选项1"/>
 
             <RadioButton
                 android:id="@+id/rb2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/EUI.RadioButton"
+                style="@style/EUI_RadioButton"
                 android:text="选项2"/>
 
         </RadioGroup>
