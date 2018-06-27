@@ -12,7 +12,7 @@ import com.mistong.android.commonui.dialog.EUIVerticalDialog;
 import com.mistong.android.commonui.dialog.EUILoadingDialog;
 import com.mistong.android.commonui.toast.EUIToast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btn_dialog_1;
     private Button btn_dialog_2;
@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RadioGroup radio;
 
     private EUILoadingDialog EUILoadingDialog;
+    private EUIVerticalDialog dialog1, dialog2, dialog3;
+    private EUIHorizontalDialog dialog4, dialog5, dialog6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,10 +79,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 builder1.setPositiveButton("知道了", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        dialog1.dismiss();
                         Toast.makeText(MainActivity.this, "点1", Toast.LENGTH_SHORT).show();
                     }
                 });
-                builder1.create().show();
+                dialog1 = builder1.create();
+                dialog1.show();
                 break;
             case R.id.btn_dialog_2:
                 EUIHorizontalDialog.Builder builder2 = new EUIHorizontalDialog.Builder(this);
@@ -89,16 +93,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 builder2.setPositiveButton("是", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        dialog4.dismiss();
                         Toast.makeText(MainActivity.this, "点2", Toast.LENGTH_SHORT).show();
                     }
                 });
                 builder2.setNegativeButton("否", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        dialog4.dismiss();
                         Toast.makeText(MainActivity.this, "点3", Toast.LENGTH_SHORT).show();
                     }
                 });
-                builder2.create().show();
+                dialog4 = builder2.create();
+                dialog4.show();
                 break;
             case R.id.btn_dialog_3:
                 EUIVerticalDialog.Builder builder3 = new EUIVerticalDialog.Builder(this);
@@ -107,22 +114,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 builder3.setPositiveButton("是", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        dialog2.dismiss();
                         Toast.makeText(MainActivity.this, "点4", Toast.LENGTH_SHORT).show();
                     }
                 });
                 builder3.setNegativeButton("否", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        dialog2.dismiss();
                         Toast.makeText(MainActivity.this, "点5", Toast.LENGTH_SHORT).show();
                     }
                 });
                 builder3.setCancelButton("再看看", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        dialog2.dismiss();
                         Toast.makeText(MainActivity.this, "点6", Toast.LENGTH_SHORT).show();
                     }
                 });
-                builder3.create().show();
+                dialog2 = builder3.create();
+                dialog2.show();
                 break;
             case R.id.btn_dialog_4:
                 EUIHorizontalDialog.Builder builder4 = new EUIHorizontalDialog.Builder(this);
@@ -130,16 +141,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 builder4.setPositiveButton("是", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        dialog5.dismiss();
                         Toast.makeText(MainActivity.this, "点7", Toast.LENGTH_SHORT).show();
                     }
                 });
                 builder4.setNegativeButton("否", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        dialog5.dismiss();
                         Toast.makeText(MainActivity.this, "点8", Toast.LENGTH_SHORT).show();
                     }
                 });
-                builder4.create().show();
+                dialog5 = builder4.create();
+                dialog5.show();
                 break;
             case R.id.btn_dialog_5:
                 EUIVerticalDialog.Builder builder5 = new EUIVerticalDialog.Builder(this);
@@ -147,10 +161,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 builder5.setWarnButton("警告", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        dialog3.dismiss();
                         Toast.makeText(MainActivity.this, "点9", Toast.LENGTH_SHORT).show();
                     }
                 });
-                builder5.create().show();
+                dialog3 = builder5.create();
+                dialog3.show();
                 break;
             case R.id.btn_dialog_6:
                 EUIHorizontalDialog.Builder builder6 = new EUIHorizontalDialog.Builder(this);
@@ -159,16 +175,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 builder6.setPositiveButton("是", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        dialog6.dismiss();
                         Toast.makeText(MainActivity.this, "点10", Toast.LENGTH_SHORT).show();
                     }
                 });
                 builder6.setNegativeButton("否", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        dialog6.dismiss();
                         Toast.makeText(MainActivity.this, "点11", Toast.LENGTH_SHORT).show();
                     }
                 });
-                builder6.create().show();
+                dialog6 = builder6.create();
+                dialog6.show();
                 break;
             case R.id.btn_toast_1:
                 EUIToast.showLong(this, "单行吐司");
@@ -176,12 +195,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_toast_2:
                 EUIToast.showLong(this, "多行吐司多行吐司多行吐司多行吐司多行吐司多行吐司多行吐司");
                 break;
-            case R.id.btn_button_1: break;
-            case R.id.btn_button_2: break;
+            case R.id.btn_button_1:
+                break;
+            case R.id.btn_button_2:
+                break;
             case R.id.btn_loading:
                 showLoadingDialog();
                 break;
-            default: break;
+            default:
+                break;
         }
     }
 

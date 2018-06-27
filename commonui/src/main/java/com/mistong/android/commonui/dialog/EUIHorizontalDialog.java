@@ -56,13 +56,6 @@ public class EUIHorizontalDialog extends Dialog {
             }
         });
 
-        findViewById(R.id.dialog_parent).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
         initView();
     }
 

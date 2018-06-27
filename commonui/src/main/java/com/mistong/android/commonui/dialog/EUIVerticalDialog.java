@@ -17,7 +17,7 @@ import com.mistong.android.commonui.R;
  */
 public class EUIVerticalDialog extends Dialog {
     private TextView tvTitle, tvContent, tvPositive, tvNegative, tvCancel, tvWarn;
-    private View dvNegative, dvCancel, dvWarn;
+    private View dvPositive, dvNegative, dvCancel, dvWarn;
     private String title;
     private String content;
     private String positiveStr;
@@ -69,13 +69,6 @@ public class EUIVerticalDialog extends Dialog {
             }
         });
 
-        findViewById(R.id.dialog_parent).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
         initView();
     }
 
@@ -86,6 +79,7 @@ public class EUIVerticalDialog extends Dialog {
         tvPositive = findViewById(R.id.tv_positive);
         tvCancel = findViewById(R.id.tv_cancel);
         tvWarn = findViewById(R.id.tv_warn);
+        dvPositive = findViewById(R.id.divider_positive);
         dvNegative = findViewById(R.id.divider_negative);
         dvCancel = findViewById(R.id.divider_cancel);
         dvWarn = findViewById(R.id.divider_warn);
@@ -111,8 +105,10 @@ public class EUIVerticalDialog extends Dialog {
 
         if (needPositive) {
             tvPositive.setVisibility(View.VISIBLE);
+            dvPositive.setVisibility(View.VISIBLE);
         } else {
             tvPositive.setVisibility(View.GONE);
+            dvPositive.setVisibility(View.GONE);
         }
 
         if (needNegative) {
@@ -133,7 +129,12 @@ public class EUIVerticalDialog extends Dialog {
 
         if (needWarn) {
             tvWarn.setVisibility(View.VISIBLE);
-            dvWarn.setVisibility(View.VISIBLE);
+            if(needPositive){
+                dvWarn.setVisibility(View.VISIBLE);
+            }else {
+                dvWarn.setVisibility(View.GONE);
+                dvPositive.setVisibility(View.VISIBLE);
+            }
         } else {
             tvWarn.setVisibility(View.GONE);
             dvWarn.setVisibility(View.GONE);

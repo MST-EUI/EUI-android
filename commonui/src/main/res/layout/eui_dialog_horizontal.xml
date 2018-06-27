@@ -9,12 +9,13 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/dialog_parent"
         android:layout_width="271dp"
         android:layout_height="wrap_content"
         android:background="@drawable/dialog_bg"
         android:gravity="center_horizontal"
         android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true"
         >
 
         <TextView
