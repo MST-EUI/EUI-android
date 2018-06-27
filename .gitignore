@@ -1,0 +1,14 @@
+
+/.idea/
+/build/
+/gradle/
+/gradlew
+/gradlew.bat
+.gradle
+*.iml
+local.properties
+mapping/
+import-summary.txt
+*/.DS_Store
+/tecentim/build/
+gradle.properties
