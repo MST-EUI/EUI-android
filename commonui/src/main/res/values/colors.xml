@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="white">#ffffff</color>
     <color name="color_4095EF">#4095EF</color>
     <color name="color_FF8C00">#FF8C00</color>
-    <color name="color_F66444">#F66444</color>
+    <color name="color_FA4A23">#FA4A23</color>
     <color name="color_000000">#000000</color>
     <color name="color_2A333A">#2A333A</color>
     <color name="color_6B7884">#6B7884</color>
     <color name="color_A7ACB9">#A7ACB9</color>
     <color name="color_C8CBD4">#C8CBD4</color>
+    <color name="color_e6e7eb">#E6E7EB</color>
+    <color name="dialog_window">#7F000000</color>//50%的#000000
 </resources>

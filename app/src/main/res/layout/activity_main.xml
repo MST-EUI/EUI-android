@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -17,99 +17,105 @@
             android:id="@+id/tv_dialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:text="弹窗"
             android:textColor="@color/color_000000"
-            android:text="弹窗"/>
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/btn_dialog_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="弹窗 - 标题+确认"/>
+            android:text="弹窗 - 标题+确认" />
 
         <Button
             android:id="@+id/btn_dialog_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="弹窗 - 标题+是否"/>
+            android:text="弹窗 - 标题+是否" />
 
         <Button
             android:id="@+id/btn_dialog_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="弹窗 - 标题+是否+跳过"/>
+            android:text="弹窗 - 标题+是否+跳过" />
 
         <Button
             android:id="@+id/btn_dialog_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="弹窗 - 是否"/>
+            android:text="弹窗 - 是否" />
 
         <Button
             android:id="@+id/btn_dialog_5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="弹窗 - 警告"/>
+            android:text="弹窗 - 警告" />
+
+        <Button
+            android:id="@+id/btn_dialog_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="弹窗 - 带输入框" />
 
         <TextView
             android:id="@+id/tv_toast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:textSize="20sp"
+            android:text="吐司"
             android:textColor="@color/color_000000"
-            android:text="吐司"/>
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/btn_toast_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:textAllCaps="false"
-            android:text="Toast - 单行"/>
+            android:text="Toast - 单行"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_toast_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:textAllCaps="false"
-            android:text="Toast - 多行"/>
+            android:text="Toast - 多行"
+            android:textAllCaps="false" />
 
         <TextView
             android:id="@+id/tv_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:textSize="20sp"
+            android:text="按钮"
             android:textColor="@color/color_000000"
-            android:text="按钮"/>
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/btn_button_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="按钮 - 普通"/>
+            android:text="按钮 - 普通" />
 
         <Button
             android:id="@+id/btn_button_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="按钮 - 禁用"/>
+            android:text="按钮 - 禁用" />
 
         <RadioGroup
             android:id="@+id/radio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            >
+            android:layout_marginTop="12dp">
 
 
         </RadioGroup>
@@ -119,17 +125,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:textSize="20sp"
+            android:text="加载"
             android:textColor="@color/color_000000"
-            android:text="加载"/>
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/btn_loading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:textAllCaps="false"
-            android:text="Loading"/>
+            android:text="Loading"
+            android:textAllCaps="false" />
 
     </LinearLayout>
 

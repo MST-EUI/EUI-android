@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialog_window"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/dialog_parent"
+        android:layout_width="271dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:maxLines="1"
+            android:textColor="@color/color_000000"
+            android:textSize="17sp"
+            tools:text="标题" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:maxLines="2"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:textColor="@color/color_2A333A"
+            android:textSize="13sp"
+            tools:text="我是内容" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/color_e6e7eb" />
+
+        <TextView
+            android:id="@+id/tv_positive"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:textColor="@color/color_4095EF"
+            android:textSize="17sp"
+            tools:text="是" />
+
+        <View
+            android:id="@+id/divider_negative"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_e6e7eb" />
+
+        <TextView
+            android:id="@+id/tv_negative"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:textColor="@color/color_4095EF"
+            android:textSize="17sp"
+            tools:text="否" />
+
+        <View
+            android:id="@+id/divider_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_e6e7eb" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:textColor="@color/color_4095EF"
+            android:textSize="17sp"
+            tools:text="再看看" />
+
+        <View
+            android:id="@+id/divider_warn"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_e6e7eb" />
+
+        <TextView
+            android:id="@+id/tv_warn"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:textColor="@color/color_FA4A23"
+            android:textSize="17sp"
+            tools:text="警告" />
+    </LinearLayout>
+</LinearLayout>

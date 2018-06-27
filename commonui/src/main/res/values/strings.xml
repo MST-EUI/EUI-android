@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">commonui</string>
+    <string name="dialog_input_hint">说点什么吧~</string>
 </resources>
