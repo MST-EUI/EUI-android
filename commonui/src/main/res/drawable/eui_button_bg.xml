@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="false">
+
+        <layer-list>
+
+            <item>
+                <shape android:shape="rectangle">
+
+                    <corners android:radius="@dimen/button_corner_radius"/>
+
+                    <gradient android:startColor="@color/color_02AAFF" android:endColor="@color/color_0387FF"/>
+
+                </shape>
+            </item>
+
+            <item>
+                <shape>
+
+                    <corners android:radius="@dimen/button_corner_radius"/>
+
+                    <solid android:color="@color/color_A6FFFFFF"/>
+
+                </shape>
+            </item>
+
+        </layer-list>
+
+    </item>
+
+    <item android:state_pressed="true">
+
+        <layer-list>
+
+            <item>
+                <shape android:shape="rectangle">
+
+                    <corners android:radius="@dimen/button_corner_radius"/>
+
+                    <gradient android:startColor="@color/color_02AAFF" android:endColor="@color/color_0387FF"/>
+
+                </shape>
+            </item>
+
+            <item>
+                <shape>
+
+                    <corners android:radius="@dimen/button_corner_radius"/>
+
+                    <solid android:color="@color/color_59000000"/>
+
+                </shape>
+            </item>
+
+        </layer-list>
+
+    </item>
+
+    <item>
+
+        <shape android:shape="rectangle">
+
+            <corners android:radius="@dimen/button_corner_radius"/>
+
+            <gradient android:startColor="@color/color_02AAFF" android:endColor="@color/color_0387FF" />
+
+        </shape>
+
+    </item>
+
+</selector>

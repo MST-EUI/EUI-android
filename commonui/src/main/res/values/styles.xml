@@ -14,4 +14,35 @@
         <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
         <item name="android:windowNoTitle">true</item>
     </style>
+
+    <style name="EUI"/>
+
+    <style name="EUI.Button" parent="Base.Widget.AppCompat.Button.Borderless">
+
+        <item name="android:background">@drawable/eui_button_bg</item>
+        <item name="android:textColor">@color/eui_button_text_color</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:minHeight">45dp</item>
+        <item name="android:paddingLeft">@dimen/button_horizontal_padding</item>
+        <item name="android:paddingRight">@dimen/button_horizontal_padding</item>
+
+    </style>
+
+    <style name="EUI.RadioButton" parent="Base.Widget.AppCompat.CompoundButton.RadioButton">
+
+        <item name="android:button">@drawable/eui_radio_button</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:paddingLeft">@dimen/radio_horizontal_padding</item>
+        <item name="android:paddingRight">@dimen/radio_horizontal_padding</item>
+        <item name="android:paddingTop">@dimen/radio_vertical_padding</item>
+        <item name="android:paddingBottom">@dimen/radio_vertical_padding</item>
+
+    </style>
+
+    <style name="EUI.Dialog" parent="Base.Theme.AppCompat.Light.Dialog">
+
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+    </style>
+
 </resources>

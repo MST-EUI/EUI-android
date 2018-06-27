@@ -1,16 +1,17 @@
 package com.mistong.android.eui;
 
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.mistong.android.commonui.dialog.EUIHorizontalDialog;
 import com.mistong.android.commonui.dialog.EUIVerticalDialog;
+import com.mistong.android.eui.toast.EUIToast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button btn_dialog_1;
     private Button btn_dialog_2;
@@ -23,6 +24,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btn_button_1;
     private Button btn_button_2;
     private Button btn_loading;
+
+    private RadioGroup radio;
+
+    private LoadingDialog loadingDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +48,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_button_2 = findViewById(R.id.btn_button_2);
 
         btn_loading = findViewById(R.id.btn_loading);
+
+        radio = findViewById(R.id.radio);
+        radio.check(R.id.rb1);
 
 
         btn_dialog_1.setOnClickListener(this);
@@ -162,18 +170,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 builder6.create().show();
                 break;
             case R.id.btn_toast_1:
-                Toast.makeText(this, "单行吐司", Toast.LENGTH_SHORT).show();
+                EUIToast.showLong(this, "单行吐司");
                 break;
             case R.id.btn_toast_2:
+                EUIToast.showLong(this, "多行吐司多行吐司多行吐司多行吐司多行吐司多行吐司多行吐司");
                 break;
-            case R.id.btn_button_1:
-                break;
-            case R.id.btn_button_2:
-                break;
+            case R.id.btn_button_1: break;
+            case R.id.btn_button_2: break;
             case R.id.btn_loading:
+                showLoadingDialog();
                 break;
-            default:
-                break;
+            default: break;
         }
     }
+
+    @Override
+    protected void onDestroy() {
+        if (loadingDialog != null) {
+            loadingDialog.dismiss();
+        }
+        super.onDestroy();
+    }
+
+    private void showLoadingDialog() {
+        if (loadingDialog == null) {
+            loadingDialog = new LoadingDialog(this);
+        }
+        if (!loadingDialog.isShowing()) {
+            loadingDialog.show();
+        }
+    }
+
 }
