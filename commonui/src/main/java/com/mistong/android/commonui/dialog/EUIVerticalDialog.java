@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.mistong.android.commonui.R;
 
 /**
+ * @Author liulf
  * 是和否两个按钮分排的情况
  */
 public class EUIVerticalDialog extends Dialog {
