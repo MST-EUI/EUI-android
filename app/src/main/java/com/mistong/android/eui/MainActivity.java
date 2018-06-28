@@ -171,6 +171,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_dialog_6:
                 EUIHorizontalDialog.Builder builder6 = new EUIHorizontalDialog.Builder(this);
                 builder6.setTitle("标题");
+                builder6.setContent("内容内容内容内容内容内容内容内容内容内容内容内容");
                 builder6.isInput(true);
                 builder6.setPositiveButton("是", new View.OnClickListener() {
                     @Override
