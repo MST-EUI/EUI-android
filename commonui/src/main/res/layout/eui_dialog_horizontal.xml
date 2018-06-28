@@ -52,7 +52,8 @@
             android:hint="@string/dialog_input_hint"
             android:inputType="text"
             android:paddingLeft="5dp"
-            android:textColor="@color/color_C8CBD4"
+            android:textColorHint="@color/color_C8CBD4"
+            android:textColor="@color/color_2A333A"
             android:textSize="13sp" />
 
         <View
