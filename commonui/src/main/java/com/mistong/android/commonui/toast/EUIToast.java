@@ -51,7 +51,10 @@ public class EUIToast {
                 int textSize = (int) context.getResources().getDimension(R.dimen.toast_text_size);
                 textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
                 int maxWidth = (int) context.getResources().getDimension(R.dimen.toast_max_width);
+                int minWidth = (int) context.getResources().getDimension(R.dimen.toast_min_width);
+                textView.setGravity(Gravity.CENTER);
                 textView.setMaxWidth(maxWidth);
+                textView.setMinWidth(minWidth);
                 int horizontalPadding = (int) context.getResources().getDimension(R.dimen.toast_horizontal_padding);
                 int verticalPadding = (int) context.getResources().getDimension(R.dimen.toast_vertical_padding);
                 sToast.getView().setPadding(horizontalPadding, verticalPadding, horizontalPadding, verticalPadding);
