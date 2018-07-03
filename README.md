@@ -15,6 +15,29 @@
                 });
     builder.create().show();
     其中 builder.create()返回对应dialog，若要执行关闭操作返回dialog使用dialog.dismiss。</pre>
-             
+
+# Toast
+  EUIToast
+  ## 使用方式
+    <pre>
+    EUIToast.showLong(this, "单行吐司"); //长时间
+    EUIToast.showShort(this, "单行吐司"); //短时间
+    </pre>
+
+# Button
+  ## 使用方式
+    <pre>
+    style="@style/EUI_Button" //普通Button使用style EUI_Button
+    style="@style/EUI_RadioButton" //RadioButton使用style EUI_RadioButton
+    </pre>
+
+# Loading
+  EUILoadingDialog
+  ## 使用方式
+    <pre>
+    EUILoadingDialog dialog = new EUILoadingDialog(this);
+    dialog.show();
+    </pre>
+
   
   
