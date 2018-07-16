@@ -15,7 +15,13 @@
                 });
     builder.create().show();
     其中 builder.create()返回对应dialog，若要执行关闭操作返回dialog使用dialog.dismiss。</pre>
-
+ ## 效果图
+  <img src="https://github.com/MST-EUI/EUI-android/blob/master/screenshot/Screenshot_20180716-113325.jpg" width="300" height="530">
+  <img src="https://github.com/MST-EUI/EUI-android/blob/master/screenshot/Screenshot_20180716-113332.jpg" width="300" height="530">
+  <img src="https://github.com/MST-EUI/EUI-android/blob/master/screenshot/Screenshot_20180716-113338.jpg" width="300" height="530">
+  <img src="https://github.com/MST-EUI/EUI-android/blob/master/screenshot/Screenshot_20180716-113344.jpg" width="300" height="530">
+  <img src="https://github.com/MST-EUI/EUI-android/blob/master/screenshot/Screenshot_20180716-113350.jpg" width="300" height="530">
+  <img src="https://github.com/MST-EUI/EUI-android/blob/master/screenshot/Screenshot_20180716-113355.jpg" width="300" height="530">
 # Toast
   EUIToast
   ## 使用方式
