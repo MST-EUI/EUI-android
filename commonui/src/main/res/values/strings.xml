@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">commonui</string>
     <string name="dialog_input_hint">说点什么吧~</string>
+    <string name="content_empty">暂时没有观看记录</string>
+    <string name="content_error">不同情况出错提示文字，参照交互</string>
+    <string name="reload">重新加载</string>
 </resources>
