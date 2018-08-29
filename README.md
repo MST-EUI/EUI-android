@@ -39,6 +39,21 @@
   ## 使用方式
     EUILoadingDialog dialog = new EUILoadingDialog(this);
     dialog.show();
+    
+# empty
+  EmptyLayout
+  ## 使用方式
+    emptyLayout.bindView(内容view); //绑定内容view
+    emptyLayout.showSuccess(); //显示内容
+    emptyLayout.showEmpty(); //内容为空时显示
+    
+    emptyLayout.showError();
+    emptyLayout.setReloadListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(ListActivity.this,"重新加载",Toast.LENGTH_LONG).show();
+                 }
+            }); //数据返回犯错显示
 
   
   
