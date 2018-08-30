@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import com.mistong.android.commonui.empty.EmptyLayout;
 
@@ -39,6 +41,12 @@ public class ListActivity extends AppCompatActivity {
                 break;
             case R.id.load_error:
                 emptyLayout.showError();
+                emptyLayout.setReloadListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(ListActivity.this,"重新加载",Toast.LENGTH_LONG).show();
+                    }
+                });
                 break;
         }
         return super.onOptionsItemSelected(item);

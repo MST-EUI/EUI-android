@@ -11,9 +11,10 @@
         <activity android:name=".MainActivity">
 
         </activity>
-        <activity android:name=".ListActivity"
+        <activity
+            android:name=".ListActivity"
             android:screenOrientation="portrait"
-            >
+            android:theme="@style/AppTheme.HasActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -5,11 +5,13 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.mistong.android.commonui.R;
 
 /**
@@ -48,9 +50,9 @@ public class EmptyLayout extends FrameLayout {
         tvEmpty = mEmptyView.findViewById(R.id.tv_empty);
         addView(mEmptyView, params);
         mErrorView = View.inflate(context, R.layout.eui_view_error, null);
-        ivError = mEmptyView.findViewById(R.id.iv_error);
-        tvError = mEmptyView.findViewById(R.id.tv_error);
-        tvReload = mEmptyView.findViewById(R.id.tv_reload);
+        ivError = mErrorView.findViewById(R.id.iv_error);
+        tvError = mErrorView.findViewById(R.id.tv_error);
+        tvReload = mErrorView.findViewById(R.id.tv_reload);
         addView(mErrorView, params);
 
         setGone();
@@ -116,6 +118,7 @@ public class EmptyLayout extends FrameLayout {
     }
 
     public void setReloadListener(View.OnClickListener listener) {
-        tvReload.setOnClickListener(listener);
+        if (listener != null && tvReload != null)
+            tvReload.setOnClickListener(listener);
     }
 }
