@@ -44,8 +44,8 @@
   EmptyLayout
   ## 使用方式
   
-  //布局<br/>
-  <com.mistong.android.commonui.empty.EmptyLayout
+    //布局
+    <com.mistong.android.commonui.empty.EmptyLayout
         android:id="@+id/emptyLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -59,7 +59,7 @@
            
     </com.mistong.android.commonui.empty.EmptyLayout>
     
-    //内容<br/>
+    //内容
     emptyLayout.bindView(内容view); //绑定内容view
     emptyLayout.showSuccess(); //显示内容
     emptyLayout.showEmpty(); //内容为空时显示
