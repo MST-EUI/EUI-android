@@ -43,6 +43,19 @@
 # empty
   EmptyLayout
   ## 使用方式
+  <com.mistong.android.commonui.empty.EmptyLayout
+        android:id="@+id/emptyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffff00"
+            />
+    </com.mistong.android.commonui.empty.EmptyLayout>
+    
     emptyLayout.bindView(内容view); //绑定内容view
     emptyLayout.showSuccess(); //显示内容
     emptyLayout.showEmpty(); //内容为空时显示
