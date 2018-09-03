@@ -43,6 +43,7 @@
 # empty
   EmptyLayout
   ## 使用方式
+  
   <com.mistong.android.commonui.empty.EmptyLayout
         android:id="@+id/emptyLayout"
         android:layout_width="match_parent"
@@ -66,7 +67,7 @@
             public void onClick(View view) {
                 Toast.makeText(ListActivity.this,"重新加载",Toast.LENGTH_LONG).show();
                  }
-            }); //数据返回犯错显示
+    }); //数据返回犯错显示
 
   
   
