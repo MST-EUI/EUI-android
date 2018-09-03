@@ -44,7 +44,6 @@
   EmptyLayout
   ## 使用方式
   
-  <pre>
   //布局<br/>
   <com.mistong.android.commonui.empty.EmptyLayout
         android:id="@+id/emptyLayout"
@@ -72,6 +71,5 @@
             Toast.makeText(ListActivity.this,"重新加载",Toast.LENGTH_LONG).show();
          }
     }); //数据返回犯错显示
-</pre>
   
   
