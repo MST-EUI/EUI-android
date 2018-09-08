@@ -43,17 +43,33 @@
 # empty
   EmptyLayout
   ## 使用方式
+  
+    //布局
+    <com.mistong.android.commonui.empty.EmptyLayout
+        android:id="@+id/emptyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffff00"
+            />
+           
+    </com.mistong.android.commonui.empty.EmptyLayout>
+    
+    //内容
     emptyLayout.bindView(内容view); //绑定内容view
     emptyLayout.showSuccess(); //显示内容
     emptyLayout.showEmpty(); //内容为空时显示
     
     emptyLayout.showError();
     emptyLayout.setReloadListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(ListActivity.this,"重新加载",Toast.LENGTH_LONG).show();
-                 }
-            }); //数据返回犯错显示
-
+         @Override
+         public void onClick(View view) {
+            Toast.makeText(ListActivity.this,"重新加载",Toast.LENGTH_LONG).show();
+         }
+    }); //数据返回犯错显示
   
   
