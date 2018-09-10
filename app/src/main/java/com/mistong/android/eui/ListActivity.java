@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mistong.android.commonui.empty.EmptyLayout;
@@ -27,9 +28,10 @@ public class ListActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.rv_content);
         emptyLayout.bindView(recyclerView);
 
-        List<String> data = new ArrayList<>();
-        Toast.makeText(this, data.get(2), Toast.LENGTH_SHORT).show();
-        Log.e("德玛",data.get(2));
+        //制造的bug
+        TextView textView=null;
+        textView.setText("dsa");
+        String substring = "9999".substring(0, 10);
     }
 
     @Override

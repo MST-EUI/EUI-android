@@ -1,8 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'findbugs'
-//代码覆盖率插件
-apply plugin: 'jacoco'
-
 android {
     compileSdkVersion 27
     defaultConfig {
@@ -20,46 +16,26 @@ android {
     }
 }
 
-task findbugs(type: FindBugs,dependsOn:"connectedAndroidTest") {//
-    ignoreFailures = true
-    effort = "default"
-    reportLevel = "medium"
-    //过滤器
-    excludeFilter = new File("${project.rootDir}/findbug_filter.xml")
-    //这里填写项目classes目录
-    classes = files("${project.rootDir}/andbase-core/build/intermediates/classes")
-    source = fileTree('src/main/java')
+apply plugin: 'findbugs'
+
+repositories {
+    mavenCentral()
+}
+
+task findbugs(type: FindBugs) {
+    ignoreFailures = true //遇到错误继续执行
+    effort = "max"
+    reportLevel = "low" //low,medium,high
+
+    excludeFilter = new File("${project.rootDir}/findbug_filter.xml") //过滤文件
+    classes = files("$project.buildDir/intermediates/classes") //这里填写项目classes目录
+    source = fileTree('build/intermediates/classes/debug/com/sn/')
     classpath = files()
     reports {
         //只能开启一个
         xml.enabled = false
         html.enabled = true
     }
-}
-
-task jacocoTestReport(type:JacocoReport){//,dependsOn:"connectedAndroidTest"
-    group = "Reporting"
-    description = "Generate Jacoco coverage reports after running tests."
-    reports{
-        xml.enabled = false
-        html.enabled = true
-        csv.enabled = false
-    }
-    classDirectories = fileTree(
-            dir : "$buildDir/intermediates/classes/debug",
-            excludes : [
-                    '**/*Test.class',
-                    '**/R.class',
-                    '**/R$*.class',
-                    '**/BuildConfig.*',
-                    '**/Manifest*.*'
-            ]
-    )
-    def coverageSourceDirs = ['src/main/java']
-    additionalSourceDirs = files(coverageSourceDirs)
-    sourceDirectories = files(coverageSourceDirs)
-    additionalClassDirs = files(coverageSourceDirs)
-    executionData = files("$buildDir/outputs/code-coverage/connected/coverage.ec")
 }
 
 dependencies {
