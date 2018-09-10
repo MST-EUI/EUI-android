@@ -20,28 +20,6 @@ android {
 
 }
 
-apply plugin: 'findbugs'
-
-repositories {
-    mavenCentral()
-}
-
-task findbugs(type: FindBugs) {
-    ignoreFailures = true //遇到错误继续执行
-    effort = "max"
-    reportLevel = "low" //low,medium,high
-
-    excludeFilter = new File("${project.rootDir}/findbug_filter.xml") //过滤文件
-    classes = files("$project.buildDir/intermediates/classes") //这里填写项目classes目录
-    source = fileTree('build/intermediates/classes/debug/com/sn/')
-    classpath = files()
-    reports {
-        //只能开启一个
-        xml.enabled = false
-        html.enabled = true
-    }
-}
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     api 'com.android.support:appcompat-v7:27.1.1'
