@@ -33,8 +33,8 @@ task findbugs(type: FindBugs) {
     classpath = files()
     reports {
         //只能开启一个
-        xml.enabled = false
-        html.enabled = true
+        xml.enabled = true
+        html.enabled = false
     }
 }
 
