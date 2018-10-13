@@ -12,3 +12,4 @@ import-summary.txt
 */.DS_Store
 /tecentim/build/
 gradle.properties
+node_modules
