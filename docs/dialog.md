@@ -61,14 +61,14 @@
 ### 效果图
 
  ##### EUIHorizontalDialog 第一个是默认效果
-   <img src="https://github.com/MST-EUI/EUI-android/blob/master/screenshot/Screenshot_20180716-113355.jpg" width="300" height="530"></br>
-   <img src="https://github.com/MST-EUI/EUI-android/blob/master/screenshot/Screenshot_20180716-113332.jpg" width="300" height="530"></br>
-   <img src="https://github.com/MST-EUI/EUI-android/blob/master/screenshot/Screenshot_20180716-113344.jpg" width="300" height="530">
+   <img src="./Screenshot_20180716-113355.jpg" width="300" height="530"></br>
+   <img src="./Screenshot_20180716-113332.jpg" width="300" height="530"></br>
+   <img src="./Screenshot_20180716-113344.jpg" width="300" height="530">
    
  ##### EUIVerticalDialog 第一个是默认效果
-   <img src="https://github.com/MST-EUI/EUI-android/blob/master/screenshot/Screenshot_20180716-113338.jpg" width="300" height="530"></br>
-   <img src="https://github.com/MST-EUI/EUI-android/blob/master/screenshot/Screenshot_20180716-113325.jpg" width="300" height="530"></br>
-   <img src="https://github.com/MST-EUI/EUI-android/blob/master/screenshot/Screenshot_20180716-113350.jpg" width="300" height="530">
+   <img src="./Screenshot_20180716-113338.jpg" width="300" height="530"></br>
+   <img src="./Screenshot_20180716-113325.jpg" width="300" height="530"></br>
+   <img src="./Screenshot_20180716-113350.jpg" width="300" height="530">
 
 
 
