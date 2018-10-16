@@ -15,7 +15,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="@color/color_C8CBD4"
+        android:layout_height="700dp"
+        android:background="@color/colorAccent"
         app:layout_constraintTop_toBottomOf="@id/banner" />
 </android.support.constraint.ConstraintLayout>
