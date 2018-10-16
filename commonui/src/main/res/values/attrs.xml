@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BannerView">
+        <attr name="isFull" format="boolean" />
+        <attr name="imgRadius" format="dimension"/>
+        <attr name="isCycle" format="boolean"/>
+        <attr name="isWheel" format="boolean"/>
+        <attr name="delay" format="integer"/>
+    </declare-styleable>
+</resources>
