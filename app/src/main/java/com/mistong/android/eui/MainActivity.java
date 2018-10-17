@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.mistong.android.commonui.dialog.ActionSheetDialog;
 import com.mistong.android.commonui.dialog.EUIHorizontalDialog;
 import com.mistong.android.commonui.dialog.EUIVerticalDialog;
 import com.mistong.android.commonui.dialog.EUILoadingDialog;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EUILoadingDialog EUILoadingDialog;
     private EUIVerticalDialog dialog1, dialog2, dialog3;
     private EUIHorizontalDialog dialog4, dialog5, dialog6;
+    private ActionSheetDialog actionSheetDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -197,6 +199,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 EUIToast.showLong(this, "多行吐司多行吐司多行吐司多行吐司多行吐司多行吐司多行吐司");
                 break;
             case R.id.btn_button_1:
+                ActionSheetDialog.Builder builder7 = new ActionSheetDialog.Builder(this);
+                builder7.setTitle("照片选择");
+                builder7.setAction1Listener("相机", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        actionSheetDialog.dismiss();
+                        Toast.makeText(MainActivity.this, "相机", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder7.setAction2Listener("相册", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        actionSheetDialog.dismiss();
+                        Toast.makeText(MainActivity.this, "相册", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                actionSheetDialog = builder7.create();
+                actionSheetDialog.show();
                 break;
             case R.id.btn_button_2:
                 break;

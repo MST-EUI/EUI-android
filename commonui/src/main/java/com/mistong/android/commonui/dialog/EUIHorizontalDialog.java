@@ -30,8 +30,8 @@ public class EUIHorizontalDialog extends Dialog {
     private View.OnClickListener positiveButtonClick;
     private View.OnClickListener negativeButtonClick;
 
-    public EUIHorizontalDialog(@NonNull Context context, Builder builder) {
-        super(context, R.style.CommonDialog);
+    private EUIHorizontalDialog(@NonNull Context context, Builder builder) {
+        super(context, R.style.EUI_Dialog);
 
         this.title = builder.title;
         this.content = builder.content;
@@ -96,18 +96,6 @@ public class EUIHorizontalDialog extends Dialog {
         if (negativeButtonClick != null) {
             tvNegative.setOnClickListener(negativeButtonClick);
         }
-    }
-
-    @Override
-    public void show() {
-        super.show();
-
-        WindowManager.LayoutParams layoutParams = getWindow().getAttributes();
-        layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
-        layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT;
-        getWindow().getDecorView().setPadding(0, 0, 0, 0);
-        getWindow().setAttributes(layoutParams);
-
     }
 
     @Keep
