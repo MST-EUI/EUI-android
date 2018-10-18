@@ -1,6 +1,6 @@
 # Dialog 对话框
 
-> dialog 组件说明文档
+> 对话框，通过打开一个浮层的方式，避免打扰用户的操作流程。
 
 ### 分类（两种使用方式一致）
  - EUIHorizontalDialog 操作按钮并排
@@ -9,14 +9,14 @@
 ### 效果图
  
  ##### EUIHorizontalDialog 第一个是默认效果
-   <img src="./Screenshot_20180716-113355.jpg" width="300" height="530"></br>
-   <img src="./Screenshot_20180716-113332.jpg" width="300" height="530"></br>
-   <img src="./Screenshot_20180716-113344.jpg" width="300" height="530">
+   <img src="./dialog/Screenshot_20180716-113355.jpg" width="300" height="530"></br>
+   <img src="./dialog/Screenshot_20180716-113332.jpg" width="300" height="530"></br>
+   <img src="./dialog/Screenshot_20180716-113344.jpg" width="300" height="530">
     
  ##### EUIVerticalDialog 第一个是默认效果
-   <img src="./Screenshot_20180716-113338.jpg" width="300" height="530"></br>
-   <img src="./Screenshot_20180716-113325.jpg" width="300" height="530"></br>
-   <img src="./Screenshot_20180716-113350.jpg" width="300" height="530">
+   <img src="./dialog/Screenshot_20180716-113338.jpg" width="300" height="530"></br>
+   <img src="./dialog/Screenshot_20180716-113325.jpg" width="300" height="530"></br>
+   <img src="./dialog/Screenshot_20180716-113350.jpg" width="300" height="530">
    
 ### 使用方式
 <pre>

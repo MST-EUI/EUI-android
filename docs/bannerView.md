@@ -1,9 +1,9 @@
 # BannerView 弹窗
 
-> bannerView 组件说明文档
+> 轮播图
 
 ### 效果图
- <img src="./Screenshot_20180716-113314.gif" width="300" height="530">
+ <img src="./bannerView/Screenshot_20180716-113314.gif" width="300" height="530">
 ### 使用方式
 
 <pre>

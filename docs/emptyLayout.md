@@ -1,16 +1,16 @@
 # EmptyLayout 空内容
 
-> emptyLayout 组件说明文档
+> 空数据
 
 ### 效果图
  ##### 显示列表
- <img src="./Screenshot_20180716-113311.png" width="300" height="530">
+ <img src="./emptyLayout/Screenshot_20180716-113311.png" width="300" height="530">
  
  ##### 显示数据为空
- <img src="./Screenshot_20180716-113312.png" width="300" height="530">
+ <img src="./emptyLayout/Screenshot_20180716-113312.png" width="300" height="530">
  
  ##### 显示加载错误
- <img src="./Screenshot_20180716-113313.png" width="300" height="530">
+ <img src="./emptyLayout/Screenshot_20180716-113313.png" width="300" height="530">
  
 ### 使用方式
  
