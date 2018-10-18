@@ -111,7 +111,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             style="@style/EUI_Button"
-            android:enabled="false"
             android:text="按钮 - 禁用"/>
 
         <RadioGroup

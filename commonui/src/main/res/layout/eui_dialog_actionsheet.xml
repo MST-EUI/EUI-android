@@ -7,7 +7,7 @@
 
     <TextView
         android:id="@+id/tv_title"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingBottom="10dp"
@@ -29,13 +29,15 @@
 
     <TextView
         android:id="@+id/tv_action1"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="60dp"
         android:gravity="center"
         android:text="选项一"
         android:textColor="@color/color_2A333A"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/divider_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         />
 
     <View
@@ -47,13 +49,15 @@
 
     <TextView
         android:id="@+id/tv_action2"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="60dp"
         android:gravity="center"
         android:text="选项二"
         android:textColor="@color/color_2A333A"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/divider_action1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         />
 
     <View
@@ -65,13 +69,15 @@
 
     <TextView
         android:id="@+id/tv_warn"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="60dp"
         android:gravity="center"
         android:text="警示"
         android:textColor="@color/color_FA4A23"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/divider_action2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         />
 
     <View
@@ -83,11 +89,14 @@
 
     <TextView
         android:id="@+id/tv_cancel"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="60dp"
         android:gravity="center"
         android:text="取消"
         android:textColor="@color/color_2A333A"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/divider_warn" />
+        app:layout_constraintTop_toBottomOf="@id/divider_warn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
 </android.support.constraint.ConstraintLayout>

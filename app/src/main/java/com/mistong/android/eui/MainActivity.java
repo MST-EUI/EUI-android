@@ -11,6 +11,7 @@ import com.mistong.android.commonui.dialog.ActionSheetDialog;
 import com.mistong.android.commonui.dialog.EUIHorizontalDialog;
 import com.mistong.android.commonui.dialog.EUIVerticalDialog;
 import com.mistong.android.commonui.dialog.EUILoadingDialog;
+import com.mistong.android.commonui.dialog.ShareDialog;
 import com.mistong.android.commonui.toast.EUIToast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -219,6 +220,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 actionSheetDialog.show();
                 break;
             case R.id.btn_button_2:
+                ShareDialog.show(this, new ShareDialog.OneShare() {
+                    @Override
+                    public void weiboShare() {
+                        Toast.makeText(MainActivity.this, "微博分享", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void weixinShare() {
+                        Toast.makeText(MainActivity.this, "微信分享", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void qqShare() {
+                        Toast.makeText(MainActivity.this, "qq分享", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void cope() {
+                        Toast.makeText(MainActivity.this, "复制链接", Toast.LENGTH_SHORT).show();
+                    }
+                });
                 break;
             case R.id.btn_loading:
                 showLoadingDialog();
