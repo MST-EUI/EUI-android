@@ -4,6 +4,8 @@ import android.content.Context;
 import android.support.design.widget.BottomSheetDialog;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
 import com.mistong.android.commonui.R;
 
 /**
@@ -16,15 +18,25 @@ public class ShareDialog {
     public static void show(Context context, final OneShare oneShare) {
         final BottomSheetDialog dialog = new BottomSheetDialog(context);
         View view = dialog.getLayoutInflater().inflate(R.layout.eui_dialog_share, null);
-        LinearLayout weibo = view.findViewById(R.id.ll_weibo);
-        LinearLayout weixin = view.findViewById(R.id.ll_weixin);
         LinearLayout qq = view.findViewById(R.id.ll_qq);
-        LinearLayout cope = view.findViewById(R.id.ll_cope);
+        LinearLayout qqZone = view.findViewById(R.id.ll_qq_zone);
+        LinearLayout weixin = view.findViewById(R.id.ll_weixin);
+        LinearLayout weixinCicle = view.findViewById(R.id.ll_weixin_circle);
+        TextView tvCancel = view.findViewById(R.id.tv_cancel);
 
-        weibo.setOnClickListener(new View.OnClickListener() {
+
+        qq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                oneShare.weiboShare();
+                oneShare.qqShare();
+                dialog.dismiss();
+            }
+        });
+
+        qqZone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                oneShare.qqZoneShare();
                 dialog.dismiss();
             }
         });
@@ -37,18 +49,17 @@ public class ShareDialog {
             }
         });
 
-        qq.setOnClickListener(new View.OnClickListener() {
+        weixinCicle.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                oneShare.qqShare();
+            public void onClick(View view) {
+                oneShare.weixinCicle();
                 dialog.dismiss();
             }
         });
 
-        cope.setOnClickListener(new View.OnClickListener() {
+        tvCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                oneShare.cope();
                 dialog.dismiss();
             }
         });
@@ -57,12 +68,12 @@ public class ShareDialog {
     }
 
     public interface OneShare {
-        void weiboShare();
+        void qqShare();
+
+        void qqZoneShare();
 
         void weixinShare();
 
-        void qqShare();
-
-        void cope();
+        void weixinCicle();
     }
 }

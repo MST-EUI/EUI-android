@@ -222,23 +222,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_button_2:
                 ShareDialog.show(this, new ShareDialog.OneShare() {
                     @Override
-                    public void weiboShare() {
-                        Toast.makeText(MainActivity.this, "微博分享", Toast.LENGTH_SHORT).show();
+                    public void qqShare() {
+                        Toast.makeText(MainActivity.this, "qq", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void qqZoneShare() {
+                        Toast.makeText(MainActivity.this, "qq空间", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
                     public void weixinShare() {
-                        Toast.makeText(MainActivity.this, "微信分享", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "微信", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
-                    public void qqShare() {
-                        Toast.makeText(MainActivity.this, "qq分享", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void cope() {
-                        Toast.makeText(MainActivity.this, "复制链接", Toast.LENGTH_SHORT).show();
+                    public void weixinCicle() {
+                        Toast.makeText(MainActivity.this, "微信朋友圈", Toast.LENGTH_SHORT).show();
                     }
                 });
                 break;
