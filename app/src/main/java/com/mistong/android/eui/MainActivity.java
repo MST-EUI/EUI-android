@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btn_button_2;
     private Button btn_loading;
     private Button btn_ptr;
+    private Button btn_bottom_tab;
 
     private RadioGroup radio;
 
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btn_loading = findViewById(R.id.btn_loading);
         btn_ptr = findViewById(R.id.btn_ptr);
+        btn_bottom_tab = findViewById(R.id.btn_bottom_tab);
 
         radio = findViewById(R.id.radio);
         radio.check(R.id.rb1);
@@ -74,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_button_2.setOnClickListener(this);
         btn_loading.setOnClickListener(this);
         btn_ptr.setOnClickListener(this);
+        btn_bottom_tab.setOnClickListener(this);
     }
 
     @Override
@@ -252,6 +255,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_ptr:
                 goToPtr();
                 break;
+            case R.id.btn_bottom_tab:
+                goToBtl();
+                break;
             default:
                 break;
         }
@@ -276,6 +282,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void goToPtr() {
         startActivity(new Intent(this, PtrActivity.class));
+    }
+
+    private void goToBtl() {
+        startActivity(new Intent(this, BottomLayoutActivity.class));
     }
 
 }

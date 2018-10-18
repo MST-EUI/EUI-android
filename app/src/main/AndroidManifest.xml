@@ -30,6 +30,9 @@
         </activity>
         <activity android:name=".PtrActivity"
             android:screenOrientation="portrait"/>
+
+        <activity android:name=".BottomLayoutActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
