@@ -32,3 +32,4 @@
 - showError(String text) 加载出错，自定义提示内容
 - showError(String text,int emptyResource) 加载出错，自定义提示内容和icon
 - setReloadListener(OnClickListener listener) 加载出错重新加载点击事件
+- setReloadListener(String reloadStr,OnClickListener listener) 自定义重新加载按钮文字

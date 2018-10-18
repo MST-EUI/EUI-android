@@ -121,4 +121,11 @@ public class EmptyLayout extends FrameLayout {
         if (listener != null && tvReload != null)
             tvReload.setOnClickListener(listener);
     }
+
+    public void setReloadListener(String reloadStr, View.OnClickListener listener) {
+        if (listener != null && tvReload != null) {
+            tvReload.setText(reloadStr);
+            tvReload.setOnClickListener(listener);
+        }
+    }
 }

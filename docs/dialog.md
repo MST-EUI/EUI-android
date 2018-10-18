@@ -1,4 +1,4 @@
-# Dialog 弹窗
+# Dialog 对话框
 
 > dialog 组件说明文档
 
