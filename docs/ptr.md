@@ -5,10 +5,10 @@
 ### 效果图
 
  ##### 下拉刷新
- <img src="./ptr_1.gif" width="300" height="530">
+ <img src="./ptr/ptr_1.gif" width="300" height="530">
 
  ##### 下拉加载更多
- <img src="./ptr_2.gif" width="300" height="530">
+ <img src="./ptr/ptr_2.gif" width="300" height="530">
 
 ### 使用方式
 <pre>

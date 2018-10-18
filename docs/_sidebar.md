@@ -5,3 +5,4 @@
 * [EmptyLayout 空内容组件](/emptyLayout)
 * [BannerView 轮播图组件](/bannerView)
 * [Ptr 下拉刷新](/ptr)
+* [BottomTabs 底部栏](/bottomtabs)
