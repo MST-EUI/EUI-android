@@ -1,5 +1,6 @@
 package com.mistong.android.eui;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btn_button_1;
     private Button btn_button_2;
     private Button btn_loading;
+    private Button btn_ptr;
 
     private RadioGroup radio;
 
@@ -53,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_button_2 = findViewById(R.id.btn_button_2);
 
         btn_loading = findViewById(R.id.btn_loading);
+        btn_ptr = findViewById(R.id.btn_ptr);
 
         radio = findViewById(R.id.radio);
         radio.check(R.id.rb1);
@@ -69,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_button_1.setOnClickListener(this);
         btn_button_2.setOnClickListener(this);
         btn_loading.setOnClickListener(this);
+        btn_ptr.setOnClickListener(this);
     }
 
     @Override
@@ -223,6 +227,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_loading:
                 showLoadingDialog();
                 break;
+            case R.id.btn_ptr:
+                goToPtr();
+                break;
             default:
                 break;
         }
@@ -243,6 +250,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (!EUILoadingDialog.isShowing()) {
             EUILoadingDialog.show();
         }
+    }
+
+    private void goToPtr() {
+        startActivity(new Intent(this, PtrActivity.class));
     }
 
 }
