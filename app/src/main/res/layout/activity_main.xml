@@ -103,7 +103,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             style="@style/EUI_Button"
-            android:text="按钮 - 普通"/>
+            android:text="选择弹窗-ActionSheet"/>
 
         <Button
             android:id="@+id/btn_button_2"
@@ -111,6 +111,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             style="@style/EUI_Button"
+            android:text="分享弹窗-ActionSheet"/>
+
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            style="@style/EUI_Button"
+            android:enabled="false"
             android:text="按钮 - 禁用"/>
 
         <RadioGroup

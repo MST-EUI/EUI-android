@@ -97,8 +97,8 @@ public class EUIPtrFooter extends InternalAbstract implements RefreshFooter {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        mPencilLeft = (getWidth() - mDrawable.getIntrinsicWidth()) / 2;
-        mPencilTop = (getHeight() - mDrawable.getIntrinsicHeight()) / 2;
+        mPencilLeft = (getMeasuredWidth() - mDrawable.getIntrinsicWidth()) / 2;
+        mPencilTop = (getMeasuredHeight() - mDrawable.getIntrinsicHeight()) / 2;
     }
 
     private void startHorizontalMoving() {
