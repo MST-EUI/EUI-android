@@ -6,3 +6,4 @@
 * [BannerView 轮播图组件](/bannerView)
 * [Ptr 下拉刷新](/ptr)
 * [BottomTabs 底部栏](/bottomtabs)
+* [List 配置表项](/list)

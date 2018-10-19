@@ -25,11 +25,11 @@ import com.mistong.android.commonui.utils.DensityUtils;
 public class InfoView extends ConstraintLayout {
 
     private enum RightMode {
-        RIGHT_MODE_ARROW(0),
-        RIGHT_MODE_TOGGLE(1),
-        RIGHT_MODE_CUSTOM(2),
-        RIGHT_MODE_TEXT(3),
-        RIGHT_MODE_NONE(-1);
+        RIGHT_MODE_ARROW(1),
+        RIGHT_MODE_TOGGLE(2),
+        RIGHT_MODE_CUSTOM(3),
+        RIGHT_MODE_TEXT(4),
+        RIGHT_MODE_NORMAL(0);
         int mode;
 
         RightMode(int mode) {
@@ -40,7 +40,7 @@ public class InfoView extends ConstraintLayout {
             for (RightMode rt : values()) {
                 if (rt.mode == mode) return rt;
             }
-            return RIGHT_MODE_NONE;
+            return RIGHT_MODE_NORMAL;
         }
     }
 
@@ -116,8 +116,8 @@ public class InfoView extends ConstraintLayout {
         mShowBottomDivider = ta.getBoolean(R.styleable.InfoView_showBottomDivider, true);
         mShowLeftImage = ta.getBoolean(R.styleable.InfoView_showLeftImage, false);
         mShowSubText = ta.getBoolean(R.styleable.InfoView_showSubText, false);
-        mRightMode = RightMode.fromId(ta.getInt(R.styleable.InfoView_rightMode, -1));
-        mLeftImageSize = ImageSize.fromId(ta.getInt(R.styleable.InfoView_LeftImageSize, -1));
+        mRightMode = RightMode.fromId(ta.getInt(R.styleable.InfoView_rightMode, 0));
+        mLeftImageSize = ImageSize.fromId(ta.getInt(R.styleable.InfoView_LeftImageSize, 0));
         mMainText = ta.getString(R.styleable.InfoView_mainText);
         mSubText = ta.getString(R.styleable.InfoView_subText);
         mRightImgRes = ta.getResourceId(R.styleable.InfoView_rightIcon, R.drawable.check);

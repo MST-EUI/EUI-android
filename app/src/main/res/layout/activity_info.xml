@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.mistong.android.commonui.list.InfoView
+        o<com.mistong.android.commonui.list.InfoView
             android:id="@+id/inf_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
