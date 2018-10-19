@@ -7,4 +7,26 @@
         <attr name="isWheel" format="boolean"/>
         <attr name="delay" format="integer"/>
     </declare-styleable>
+
+    <declare-styleable name="InfoView">
+        <attr name="showBottomDivider" format="boolean"/>
+        <attr name="showLeftImage" format="boolean"/>
+        <attr name="showSubText" format="boolean"/>
+        <attr name="LeftImageSize" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="large" value="1"/>
+        </attr>
+        <attr name="mainText" format="string"/>
+        <attr name="subText" format="string"/>
+        <attr name="rightMode" format="enum">
+            <enum name="arrow" value="0"/>
+            <enum name="toggle" value="1"/>
+            <enum name="customIcon" value="2"/>
+            <enum name="text" value="3"/>
+        </attr>
+        <attr name="rightIcon" format="reference"/>
+        <attr name="leftIcon" format="reference"/>
+        <attr name="rightMargin" format="dimension"/>
+        <attr name="rightText" format="string"/>
+    </declare-styleable>
 </resources>

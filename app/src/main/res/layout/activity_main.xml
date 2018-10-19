@@ -193,6 +193,23 @@
             android:text="看看底部栏"
             android:textAllCaps="false" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="表项"
+            android:textColor="@color/color_000000"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="看看所有List组件"
+            android:textAllCaps="false" />
+
+
     </LinearLayout>
 
 </ScrollView>
