@@ -3,6 +3,7 @@
 > list 组件说明文档
 
 ### 效果图
+<img src="./list/Screenshot_20181025-113201.png" width="300" height="530">
 
 ### 使用方式
 <pre>

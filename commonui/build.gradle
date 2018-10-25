@@ -1,5 +1,10 @@
 apply plugin: 'com.android.library'
 
+version = '1.0.0'
+ext.pom_groupId = 'com.mistong.android'
+ext.pom_artifactId = 'eui'
+ext.pom_snapshot = false
+
 android {
     compileSdkVersion 27
 
@@ -28,3 +33,5 @@ dependencies {
     api 'com.android.support:design:27.1.1'
     api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
 }
+
+apply from: 'jfrog.gradle'

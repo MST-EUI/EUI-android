@@ -1,7 +1,15 @@
-## eui-android
+# EUI-Android
 
-> eui-android 是铭师堂升学 e 网通事业部 Anroid 端 UI 规范的 Native 实现，提供了一整套基础的 UI 组件以及一些常用的业务组件。
+> eui-android 是铭师堂升学 e 网通事业部 Android 端 UI 规范的 Native 实现，提供了一整套基础的 UI 组件以及一些常用的业务组件。
 
-## Usage
+### Requirements
 
-> 可参考单个组件的说明文档
+> minSdkVersion 14
+
+### Installation
+
+> 在build.gradle中添加依赖
+
+<pre>
+compile "com.mistong.android:eui:1.0.0"
+</pre>

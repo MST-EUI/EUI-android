@@ -1,0 +1,74 @@
+apply plugin: 'com.jfrog.artifactory'
+apply plugin: 'maven-publish'
+def MAVEN_LOCAL_PATH = 'http://172.16.12.36:8081/artifactory/'
+task androidSourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.sourceFiles
+}
+build.dependsOn androidSourcesJar
+publishing {
+    publications {
+        aar(MavenPublication) {
+            groupId pom_groupId
+            artifactId pom_artifactId
+            // Tell maven to prepare the generated "*.aar" file for publishing
+            if (pom_snapshot) {
+                version "${version}-SNAPSHOT"
+                artifact("$buildDir/outputs/aar/${project.getName()}-debug.aar")
+            } else {
+                version version
+                artifact("$buildDir/outputs/aar/${project.getName()}-release.aar")
+            }
+            artifact androidSourcesJar
+            pom.withXml {
+                def dependencies = asNode().appendNode('dependencies')
+                configurations.compile.allDependencies.each {
+                    def depGroup = it.group
+                    def depName = it.name
+                    def depVersion = it.version
+                    //如果当前库是annotation-lib，重写依赖
+                    if (it.name == "annotation-lib") {
+                        for (proj in project.parent.subprojects) {
+                            if (proj.name == "annotation-lib") {
+                                //这些信息是在annotation-lib的build.gradle中定义的
+                                depGroup = proj.ext.group
+                                depName = proj.ext.artifactId
+                                depVersion = proj.ext.version
+                            }
+                        }
+                    }
+                    if (it.group != null) {
+                        def dependency = dependencies.appendNode('dependency')
+                        dependency.appendNode('groupId', depGroup)
+                        dependency.appendNode('artifactId', depName)
+                        dependency.appendNode('version', depVersion)
+                    }
+                }
+            }
+        }
+    }
+}
+artifactory {
+    contextUrl = MAVEN_LOCAL_PATH
+    publish {
+        repository {
+            // The Artifactory repository key to publish to
+            if (pom_snapshot) {
+                repoKey = 'gradle-dev-snapshot'
+            } else {
+                repoKey = 'gradle-dev-local'
+            }
+            username = "admin"
+            password = "password"
+        }
+        defaults {
+            // Tell the Artifactory Plugin which artifacts should be published to Artifactory.
+            publications('aar')
+            publishArtifacts = true
+            // Properties to be attached to the published artifacts.
+            properties = ['qa.level': 'basic', 'dev.team': 'core']
+            // Publish generated POM files to Artifactory (true by default)
+            publishPom = true
+        }
+    }
+}

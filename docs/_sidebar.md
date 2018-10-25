@@ -1,4 +1,6 @@
 * [快速开始](/)
+* [如何参与](/howtojoin)
+* [开发规范](/rules)
 * [Button 按钮](/button)
 * [Toast 吐司](/toast)
 * [Dialog 对话框](/dialog)
